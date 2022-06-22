@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.863), rgba(255, 255, 255, 0.493));
+    font-family: 'Bebas Neue';
+}
+
+
+/* =========HEADER=========== */
+
+.logo-principal{
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to left, black, whitesmoke);
+}
+
+/* =======NAV======= */
+
+.container-barra-nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;    
+
+}
+
+.container-barra-nav li{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    border: 1px solid rgba(3, 3, 3, 0.925);
+    border-radius: 10%;
+    padding: 10px;
+
+}
+
+.container-barra-nav li:hover{
+    transition: 200ms;
+    background-color: black;
+}
+
+.container-barra-nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.container-barra-nav a:hover{
+transition: 300ms;
+color: white;
+
+}
+
+
+/* ==========BODY========= */
+.container-inicio{
+    grid-area: section1;
+    display: flex;
+    justify-content: center;
+} 
+
+.container-inicio img{
+    width: 33%;
+}
+
+
+.textos-inicio{
+    text-align: center;
+    margin: 20px 0 20px 0;
+    grid-area: section2;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS';
+}
+
+.textos-inicio p{
+    text-decoration: underline;
+}
+
+.texto-final-inicio{
+    grid-area: section4;
+    margin: 20px;
+    text-align: center;
+}
+
+
+/* =======CARDS STOCK INICIO======= */
+
+.container-card-inicio{
+    grid-area: section3;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-inicio{
+    text-align: center;
+    border: 1px solid whitesmoke;
+    background-color: rgba(0, 0, 0, 0.836);
+    margin-bottom: 20px;
+    
+}
+
+.card-inicio:hover{
+    transition: 300ms;
+    box-shadow: 0px 0px 3em rgb(0, 0, 0);
+}
+
+
+.img-inicio{
+    width: 600px;
+}
+
+.card-inicio ul li {
+    color: whitesmoke;
+    margin: 10px;
+}
+
+.card-inicio h2{
+    margin: 5px;
+    color: whitesmoke;
+}
+
+
+/* =======FOOTER====== */
+.pie{
+    grid-area: footer;
+    font-family:Tahoma;
+    color: rgba(0, 0, 0, 0.911);
+    font-size: 12px;
+    margin-top: 70px;
+    background-image: linear-gradient(to left, black, whitesmoke);
+}
+
+.textofootI{
+    text-align: center;
+    font-style: italic;
+    padding: 25px;
+    font-size: 30px;
+    font-family: Verdana;
+}
+.container-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    
+
+}  
+
+.container-footer-items p{
+    text-align: center;
+    margin: 20px;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+}
+
+.container-footer-items p:hover{
+    text-decoration: underline;
+    transition: 100ms;
+}
+
+.iconos-footer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+.iconos-footer img{
+    margin-right: 10px;
+}
+
+
+.footer-uno{
+    display: flex;
+    justify-content: space-around;
+}
+
+.location-footer{
+    display: flex;
+    
+
+}
+
+
+/* ========BOTONES======= */
+
+.btn-wsp {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom:20px ;
+    right:20px ;
+    
+}
+.btn-wsp:hover{
+    width: 75px;
+    height: 75px;
+    transition: 500ms;
+}
+
+.btn{
+    width: max-content;
+    color: #000000;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #000000;
+    margin-top: 40px;
+    display: inline-block;
+    
+}
+
+
+
+
+/* =======GRIDS===== */
+
+
+.div-container-index{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr 1fr 1fr 100px 1fr;
+    height: 100vh;
+    grid-template-areas: 
+    "header" 
+    "section1"
+    "section2"
+    "section3"
+    "section4"
+    "footer";
+}
+
+
+/* ========================PAG STOCK=========================== */
+
+
+.div-container-stock{
+    display:grid ;
+    grid-template-rows: 400px 1fr 100px auto 100px 1fr;
+
+
+    grid-template-areas: 
+    "header header"
+    "carrusel carrusel"
+    "texto1 texto1"
+    "container container"
+    "texto2 texto2"
+    "footer footer";
+}
+
+.header-stock{
+    grid-area: header;
+}
+
+.carrusel-stock{
+    grid-area: carrusel;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.texto-arriba-stock{
+    grid-area: texto1;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.container-stock{
+    grid-area: container;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.texto-final-stock{
+    grid-area: texto2;
+    text-align: center;
+    margin: 40px;
+}
+
+.texto-final-stock h2{
+    font-size: 40px;
+}
+
+.texto-final-stock p{
+    font-style: italic;
+    color: white;
+    background-color: rgba(3, 2, 2, 0.795);
+    margin-top: 15px;
+}
+
+
+/* ================ */
+
+
+.card-stock{
+    border: 3px solid white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-stock h2{
+    background-color: rgba(255, 255, 255, 0.904);
+}
+
+.card-stock :hover{
+    transition: 500ms;
+}
+
+.card-stock ul li:hover{
+    color: rgb(255, 0, 0);
+}
+
+.img-stock{
+    width: 400px;
+}
+
+
+/* =======PAG REDES======= */
+
+.div-container-redes{
+    display: grid;
+    grid-template-rows: 400px 450px 300px 1fr;
+
+    grid-template-areas: 
+    "header"
+    "redes"
+    "video"
+    "footer";
+}
+
+.header-redes{
+    grid-area: header;
+}
+
+.container-redes{
+    grid-area: redes;
+
+}
+
+.container-img-redes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(48, 47, 47, 0.856);
+    height: 200px;
+    align-items: center;
+}
+
+.container-redes h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-top: 20px;
+    padding: 20px;
+    text-decoration: underline;
+    background-color: rgba(238, 234, 234, 0.822);
+}
+
+.container-redes p{
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(238, 234, 234, 0.822);
+}
+
+.video-redes{
+    grid-area: video;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+
+/* ========PAG QUIENES SOMOS========= */
+
+.container-quienes-somos{
+    display: grid;
+    grid-template-rows: 400px 1fr 1fr;
+    grid-template-areas: 
+    "header"
+    "quienessomos"
+    "footer";
+}
+
+
+.header-quienessomos{
+    grid-area: header;
+}
+
+.quienes-somos{
+    grid-area: quienessomos;
+}
+
+.quienes-somos h1{
+    text-align: center;
+    font-size: 50px;
+    background-color: whitesmoke;
+}
+
+.foto-quienes-somos{
+    text-align: center;
+
+}
+
+.texto-quienes-somos{
+    text-align: center;
+    text-decoration: double;
+    font-size: 30px;
+    margin-top: 40px;
+
+}
+
+
+/* ==========PAG COTIZA TU AUTO========= */
+
+.container-cotizacion{
+    display: grid;
+    grid-template-rows: 400px 400px 100px 300px 100px 1fr;
+    grid-template-areas:
+    "header"
+    "banner"
+    "texto1"
+    "formulario"
+    "texto2"
+    "footer";
+}
+
+.header-cotizacion{
+    grid-area: header;
+}
+
+.formulario{
+    grid-area: formulario;
+}
+
+.texto1-cotizacion{
+    grid-area: texto1;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.texto2-cotizacion {
+    grid-area: texto2;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.banner-cotizacion{
+    grid-area: banner;
+    text-align: center;
+    background-color: rgba(168, 165, 165, 0.904);
+}
+
+.banner-cotizacion img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
